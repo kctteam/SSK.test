@@ -17,8 +17,8 @@ include('app.php')
 <body class="bg-light">
     <div class="container pt-5">
         <div class="row">
-            <div class="col-12 col-lg-6 pe-0 pe-lg-5">
-                <h2 class="mb-4">Todo list</h2>
+            <div class="col-12 col-lg-8 pe-0 pe-lg-5">
+                <h2 class="mb-4"><b>Todo list</b> <small class="text-muted ms-2">v.php</small></h2>
                 <? if (count(Notes::$notes) > 0) : ?>
                     <div class="row">
                         <? foreach (Notes::$notes as $key => $note) : ?>
@@ -27,7 +27,7 @@ include('app.php')
                     </div>
                 <? endif; ?>
             </div>
-            <div class="col-12 col-lg-6 start pe-0 pe-lg-5 mt-5 mt-lg-0">
+            <div class="col-12 col-lg-4 start pe-0 pe-lg-5 mt-5 mt-lg-0">
                 <? include('view/form.php') ?>
             </div>
         </div>

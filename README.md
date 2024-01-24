@@ -20,12 +20,29 @@ app.php - Функционал приложения<br>
 index.php
 
 # Проверка
+
+Необходим последовательный запуск Backend и Frontend компонента:
+
+## Backend
 В консоли - корневой директории, выполнить команду:
 ```
 php -S localhost:8000
 ```
+
+## Frontend
+В консоли - корневой директории, выполнить команды:
+```
+cd frontend
+npm i
+npm start
+```
+
 Открыть в браузере:
-[http://localhost:8000/](http://localhost:8000/)
+
+[Backend - http://localhost:8000/](http://localhost:8000/)
+
+
+[Frontend - http://localhost:3000/](http://localhost:3000/)
 
 # Контакты
 

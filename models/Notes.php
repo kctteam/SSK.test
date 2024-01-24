@@ -3,6 +3,15 @@
 class Notes
 {
     public static $notes = [];
+    //Массив
+    public static function json()
+    {
+        $json = [];
+        foreach (self::$notes as $key => $note) {
+            $json[] = $note->values;
+        }
+        return json_encode($json, JSON_UNESCAPED_UNICODE);
+    }
     //Загрузка
     public static function load()
     {
@@ -18,11 +27,8 @@ class Notes
     //Сохранение
     public static function save()
     {
-        $json = [];
-        foreach (self::$notes as $key => $note) {
-            $json[] = $note->values;
-        }
-        file_put_contents('save.json', json_encode($json, JSON_UNESCAPED_UNICODE));
+
+        file_put_contents('save.json', Notes::json());
     }
     //Удаление
     public static function delete($id)
